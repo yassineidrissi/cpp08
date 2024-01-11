@@ -3,16 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: yaidriss <yaidriss@student.42.fr>          +#+  +:+       +#+         #
+#    By: yassine <yassine@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/03 17:47:01 by yaidriss          #+#    #+#              #
-#    Updated: 2024/01/09 17:54:07 by yaidriss         ###   ########.fr        #
+#    Updated: 2024/01/11 15:30:18 by yassine          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = c++
 FLAGE = -Wall -Wextra -Werror -std=c++98
-NAME = Array 
+NAME = Easyfind 
 SRC =  main.cpp
 OBJ = $(SRC:.cpp=.o)
 
