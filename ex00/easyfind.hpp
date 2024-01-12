@@ -6,7 +6,7 @@
 /*   By: yaidriss <yaidriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 12:57:25 by yaidriss          #+#    #+#             */
-/*   Updated: 2024/01/10 13:08:42 by yaidriss         ###   ########.fr       */
+/*   Updated: 2024/01/10 13:15:49 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,3 +16,7 @@
 
 template <typename T>
 
+easyfind(const T)
+{
+	
+}
