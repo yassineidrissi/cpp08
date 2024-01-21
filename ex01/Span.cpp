@@ -6,7 +6,7 @@
 /*   By: yaidriss <yaidriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 20:51:28 by yaidriss          #+#    #+#             */
-/*   Updated: 2024/01/21 19:04:45 by yaidriss         ###   ########.fr       */
+/*   Updated: 2024/01/21 20:50:48 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,13 +30,17 @@ Span::Span(double n)
 
 Span::Span(const Span& other)
 {
-	if(other == this)
-		reutrn ;
-	this->N = other.N;
-	this->container = new container(N);
+	(void) other;
+	// if(other == this)
+	// 	reutrn ;
+	// this->N = other.N;
+	// this->container = new container(this->N);
+	std::cout << "copy constructor" << std::endl;
+	
 }
 
-void Spain::addNumber(double n)
+void Span::addNumber(int n)
 {
-	this.container.push_back(n);
+	(void)n;
+	this->container.push_back(n);
 }

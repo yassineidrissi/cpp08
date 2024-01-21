@@ -6,13 +6,13 @@
 #    By: yaidriss <yaidriss@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/03 17:47:01 by yaidriss          #+#    #+#              #
-#    Updated: 2024/01/21 15:42:19 by yaidriss         ###   ########.fr        #
+#    Updated: 2024/01/21 21:00:49 by yaidriss         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = c++
 FLAGE = -Wall -Wextra -Werror -std=c++98
-NAME = Easyfind 
+NAME = Span 
 SRC =  main.cpp Span.cpp
 OBJ = $(SRC:.cpp=.o)
 
