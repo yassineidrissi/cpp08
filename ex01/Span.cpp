@@ -6,7 +6,7 @@
 /*   By: yaidriss <yaidriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 20:51:28 by yaidriss          #+#    #+#             */
-/*   Updated: 2024/01/24 01:38:24 by yaidriss         ###   ########.fr       */
+/*   Updated: 2024/01/24 01:47:28 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,13 +59,13 @@ void Span::print() {
 
 int Span::shortestSpan(void)
 {
-	int  shortestSpan = 0;
+	int  shortestSpan = INT_MAX;
 	for(std::vector<int>::iterator i = container.begin(); i != container.end(); ++i)
 	{
-		for(std::vector<int>::iterator j = container.begin();j != container.end(); ++j)
+		for(std::vector<int>::iterator j = i + 1;j != container.end(); ++j)
 		{
-			if(shortestSpan > std::abs(j - i))
-				shortestSpan = std::abs(j - i);
+			if(shortestSpan > std::abs(*j - *i))
+				shortestSpan = std::abs(*j - *i);
 		}
 		
 	}
@@ -77,10 +77,10 @@ int Span::longestSpan(void)
 	int longestSpan = 0;
 	for(std::vector<int>::iterator i = container.begin(); i != container.end(); ++i)
 	{
-		for(std::vector<int>::iterator j = container.begin();j != container.end(); ++j)
+		for(std::vector<int>::iterator j = i + 1;j != container.end(); ++j)
 		{
-			if(longestSpan < std::abs(j - i))
-				longestSpan = std::abs(j - i);
+			if(longestSpan < std::abs(*j - *i))
+				longestSpan = std::abs(*j - *i);
 		}
 		
 	}
