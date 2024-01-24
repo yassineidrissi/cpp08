@@ -6,7 +6,7 @@
 /*   By: yaidriss <yaidriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 20:52:03 by yaidriss          #+#    #+#             */
-/*   Updated: 2024/01/21 23:15:21 by yaidriss         ###   ########.fr       */
+/*   Updated: 2024/01/24 01:38:55 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ int main()
 	sp.addNumber(17);
 	sp.addNumber(9);
 	sp.addNumber(11);
-	
-	// std::cout << sp.shortestSpan() << std::endl;
-	// std::cout << sp.longestSpan() << std::endl;
+	// sp.print();	
+	std::cout << "the shortest Span is " << sp.shortestSpan() << std::endl;
+	std::cout << sp.longestSpan() << std::endl;
 	return 0;
 }
