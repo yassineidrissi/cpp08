@@ -6,7 +6,7 @@
 /*   By: yaidriss <yaidriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 20:27:06 by yaidriss          #+#    #+#             */
-/*   Updated: 2024/01/25 01:54:12 by yaidriss         ###   ########.fr       */
+/*   Updated: 2024/01/25 18:19:43 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ MutantStack<T>::MutantStack()
 	std::cout << "MutantStack constructor" << std::endl;
 }
 
-MutantStack<cT>::~MutantStack()
+MutantStack<T>::~MutantStack()
 {
 	std::cout << "MutantStack destructor" << std::endl;
 }

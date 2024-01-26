@@ -6,7 +6,7 @@
 /*   By: yaidriss <yaidriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 20:51:28 by yaidriss          #+#    #+#             */
-/*   Updated: 2024/01/24 01:53:19 by yaidriss         ###   ########.fr       */
+/*   Updated: 2024/01/27 00:55:03 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,23 +29,25 @@ Span::Span(unsigned int n)
 	std::cout << "constructor with parametre n" << std::endl;
 }
 
-Span::Span(const Span& other)
+Span::Span(const Span& other) : Max(other.Max), container(other.container)
 {
-	(void) other;
-	// if(other == this)
-	// 	reutrn ;
-	// this->N = other.N;
-	// this->container = new container(this->N);
-	std::cout << "copy constructor" << std::endl;
-	
+	std::cout << "copy constructor" << std::endl;	
+}
+
+Span& Span::operator=(const Span& other)
+{
+	if(this != &other)
+	{
+		this->Max = other.Max;
+		container = other.container;
+	}
+	return *this;
 }
 
 void Span::addNumber(int n)
 {
-	unsigned int size = container.size();
-	std::cout << size << std::endl;
-	if(size >= this->Max)
-		throw "Max Size";
+	if(container.size() >= this->Max)
+		throw "Span is Full";
 	else
 		this->container.push_back(n);
 }
