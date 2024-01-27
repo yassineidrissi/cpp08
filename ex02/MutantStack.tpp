@@ -6,7 +6,7 @@
 /*   By: yaidriss <yaidriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 20:27:06 by yaidriss          #+#    #+#             */
-/*   Updated: 2024/01/27 20:00:09 by yaidriss         ###   ########.fr       */
+/*   Updated: 2024/01/27 20:12:07 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ MutantStack<T>::MutantStack(const MutantStack& other)
 
 template <typename T>
 
-typename MutantStack<T>::iterator MutantStack<T>::begin(void)
+typename MutantStack<T>::iterator MutantStack<beginT>::(void)
 {
 	return std::stack<T>::c.begin();
 }

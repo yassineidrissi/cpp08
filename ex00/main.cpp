@@ -6,7 +6,7 @@
 /*   By: yaidriss <yaidriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 12:47:17 by yaidriss          #+#    #+#             */
-/*   Updated: 2024/01/18 18:46:31 by yaidriss         ###   ########.fr       */
+/*   Updated: 2024/01/27 16:04:48 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int main()
     try
     {
         std::vector<int>::iterator it = easyfind(myCont, valueToFind);
-        std::cout << "Found " << valueToFind << " at position " << std::distance(myCont.begin(), it) << "\n";
+        std::cout << "Found " << valueToFind << "\n";
     }
     catch(const char *msg)
     {
