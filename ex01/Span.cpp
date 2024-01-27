@@ -6,17 +6,15 @@
 /*   By: yaidriss <yaidriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 20:51:28 by yaidriss          #+#    #+#             */
-/*   Updated: 2024/01/27 00:55:03 by yaidriss         ###   ########.fr       */
+/*   Updated: 2024/01/27 16:53:57 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Span.hpp"
 
-// Span::Span()
-// {
-// 	this->Max = 3;
-// 	std::cout << "constructor" << std::endl;
-// }
+Span::Span():Max(0)
+{
+}
 
 Span::~Span()
 {
@@ -47,7 +45,7 @@ Span& Span::operator=(const Span& other)
 void Span::addNumber(int n)
 {
 	if(container.size() >= this->Max)
-		throw "Span is Full";
+		throw "Span is Full"; //         throw std::runtime_error("Span is full");
 	else
 		this->container.push_back(n);
 }
@@ -62,7 +60,7 @@ void Span::print() {
 int Span::shortestSpan(void)
 {
 	if (container.size() < 3)
-		throw "Need more values";
+		throw "Need more values"; //        throw std::runtime_error("Span is full");
 	int  shortestSpan = INT_MAX;
 	for(std::vector<int>::iterator i = container.begin(); i != container.end(); ++i)
 		for(std::vector<int>::iterator j = i + 1;j != container.end(); ++j)
@@ -74,7 +72,7 @@ int Span::shortestSpan(void)
 int Span::longestSpan(void)
 {
 	if (container.size() < 3)
-		throw "Need more values";
+		throw "Need more values"; //         throw std::runtime_error("Span is full");
 	int longestSpan = 0;
 	for(std::vector<int>::iterator i = container.begin(); i != container.end(); ++i)
 		for(std::vector<int>::iterator j = i + 1;j != container.end(); ++j)
