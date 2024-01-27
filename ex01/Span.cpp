@@ -6,7 +6,7 @@
 /*   By: yaidriss <yaidriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 20:51:28 by yaidriss          #+#    #+#             */
-/*   Updated: 2024/01/27 21:15:40 by yaidriss         ###   ########.fr       */
+/*   Updated: 2024/01/28 00:43:22 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,9 +81,10 @@ int Span::longestSpan(void)
 	return longestSpan;
 }
 
-typename Span::
-
-void Span::range(T::T::iterator begin, T::iterator end)
+void Span::range(std::vector<int>::iterator begin, std::vector<int>::iterator end)
 {
-	container.insert(begin, engZZ)
+	for (std::vector<int>::iterator i = begin; i != end; ++i) 
+	{
+        container.push_back(*i);
+    }
 }
