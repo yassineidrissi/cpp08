@@ -6,7 +6,7 @@
 /*   By: yaidriss <yaidriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 20:51:28 by yaidriss          #+#    #+#             */
-/*   Updated: 2024/01/28 00:43:22 by yaidriss         ###   ########.fr       */
+/*   Updated: 2024/01/28 00:52:16 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ Span& Span::operator=(const Span& other)
 void Span::addNumber(int n)
 {
 	if(container.size() >= this->Max)
-		throw "Span is Full"; //         throw std::runtime_error("Span is full");
+		throw "Span is Full";
 	else
 		this->container.push_back(n);
 }
@@ -60,7 +60,7 @@ void Span::print() {
 int Span::shortestSpan(void)
 {
 	if (container.size() < 3)
-		throw "Need more values"; //        throw std::runtime_error("Span is full");
+		throw "Need more values"; 
 	int  shortestSpan = INT_MAX;
 	for(std::vector<int>::iterator i = container.begin(); i != container.end(); ++i)
 		for(std::vector<int>::iterator j = i + 1;j != container.end(); ++j)
@@ -72,7 +72,7 @@ int Span::shortestSpan(void)
 int Span::longestSpan(void)
 {
 	if (container.size() < 3)
-		throw "Need more values"; //         throw std::runtime_error("Span is full");
+		throw "Need more values";
 	int longestSpan = 0;
 	for(std::vector<int>::iterator i = container.begin(); i != container.end(); ++i)
 		for(std::vector<int>::iterator j = i + 1;j != container.end(); ++j)
