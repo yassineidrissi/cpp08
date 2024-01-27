@@ -6,7 +6,7 @@
 /*   By: yaidriss <yaidriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 20:27:06 by yaidriss          #+#    #+#             */
-/*   Updated: 2024/01/25 18:19:43 by yaidriss         ###   ########.fr       */
+/*   Updated: 2024/01/27 20:00:09 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,20 +19,41 @@ MutantStack<T>::MutantStack()
 	std::cout << "MutantStack constructor" << std::endl;
 }
 
+template <typename T>
+
 MutantStack<T>::~MutantStack()
 {
 	std::cout << "MutantStack destructor" << std::endl;
 }
 
-void MutantStack<T>::push(const T& value)
+template <typename T>
+
+MutantStack<T>::MutantStack(const MutantStack& other)
 {
-	stack.push_back(value);
-	std::cout << "pushed " << value << std::endl;
+	std::stack<T> (*this) = other;
+	std::cout << "copy constructor" << std::endl;
+	return *this;
 }
 
-void MutantStack<T>::pop(void)
+template <typename T>
+
+typename MutantStack<T>::iterator MutantStack<T>::begin(void)
 {
-	std::vector<T>::iterator i = stack.begin();
-	++i;
-	this->stack = i;
+	return std::stack<T>::c.begin();
+}
+
+template <typename T>
+
+typename MutantStack<T>::iterator MutantStack<T>::end(void)
+{
+	
+	return std::stack<T>::c.end();
+}
+
+template <typename T>
+
+MutantStack<T>& MutantStack<T>::operator==(const MutantStack& other)
+{
+	std::stack<T>::operator==(other);
+	return (*this);
 }
