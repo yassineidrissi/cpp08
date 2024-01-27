@@ -6,7 +6,7 @@
 /*   By: yaidriss <yaidriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 20:51:38 by yaidriss          #+#    #+#             */
-/*   Updated: 2024/01/27 20:09:03 by yaidriss         ###   ########.fr       */
+/*   Updated: 2024/01/27 21:11:48 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 #include <iostream>
 #include <vector>
+
 
 class Span
 {
@@ -31,5 +32,5 @@ class Span
 	int	shortestSpan(void);
 	int longestSpan(void);
 	void print(void);
-	//! need to add range function to span
+	void range(std::vector<int>::iterator begin, std::vector<int>::iterator end);
 };

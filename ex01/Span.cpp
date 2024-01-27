@@ -6,7 +6,7 @@
 /*   By: yaidriss <yaidriss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 20:51:28 by yaidriss          #+#    #+#             */
-/*   Updated: 2024/01/27 16:53:57 by yaidriss         ###   ########.fr       */
+/*   Updated: 2024/01/27 21:15:40 by yaidriss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,4 +79,11 @@ int Span::longestSpan(void)
 			if(longestSpan < std::abs(*j - *i))
 				longestSpan = std::abs(*j - *i);
 	return longestSpan;
+}
+
+typename Span::
+
+void Span::range(T::T::iterator begin, T::iterator end)
+{
+	container.insert(begin, engZZ)
 }
